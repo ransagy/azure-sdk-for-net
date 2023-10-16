@@ -20,6 +20,13 @@ namespace Azure.Extensions.AspNetCore.Configuration.Secrets
         public virtual string GetKey(Azure.Security.KeyVault.Secrets.KeyVaultSecret secret) { throw null; }
         public virtual bool Load(Azure.Security.KeyVault.Secrets.SecretProperties secret) { throw null; }
     }
+    public partial class SelectiveKeyVaultSecretManager
+    {
+        public SelectiveKeyVaultSecretManager(string[] secrets) { }
+        public virtual System.Collections.Generic.Dictionary<string, string> GetData(System.Collections.Generic.IEnumerable<Azure.Security.KeyVault.Secrets.KeyVaultSecret> secrets) { throw null; }
+        public virtual string GetKey(Azure.Security.KeyVault.Secrets.KeyVaultSecret secret) { throw null; }
+        public virtual bool Load(Azure.Security.KeyVault.Secrets.SecretProperties secret) { throw null; }
+    }
 }
 namespace Microsoft.Extensions.Configuration
 {
